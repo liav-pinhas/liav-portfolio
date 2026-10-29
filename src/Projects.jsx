@@ -23,7 +23,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-3.5 rounded-[1.25rem] border border-dashed border-white/[0.09] px-8 py-16 text-center text-[#5b6576]">
+        <div className="flex flex-col items-center justify-center gap-3.5 rounded-[1.25rem] border border-dashed border-white/[0.09] px-8 py-16 text-center text-[#8190a5]">
           <Plus className="h-8 w-8 text-[#5b9dff] opacity-70" />
           <span className="text-[1.05rem] font-semibold text-[#edf1f6]">More Projects Coming Soon</span>
           <span className="max-w-md text-[0.92rem] leading-[1.6]">

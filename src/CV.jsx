@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 
 // Same design tokens as Hero.jsx — see that file's header comment.
 // This section is a self-contained "Background" block: a stat row, a bio
@@ -21,6 +21,13 @@ const CORE_KNOWLEDGE = [
   "Power Electronics",
 ];
 
+const TIMELINE = [
+  { years: "2024 – 2028", title: "B.Sc. Electrical & Electronics Engineering", detail: "Ariel University · 96.55 average · Dean's List (year 1)" },
+  { years: "2023 – Present", title: "Team Commander → Acting Company Operations Officer", detail: "Sayeret Carmeli, IDF Reserves · plans missions, leads the company's drone team" },
+  { years: "2019 – 2023", title: "Combat Team Sergeant", detail: "Sayeret Golani · complex operations, specialized equipment · Certificate of Appreciation from the unit commander" },
+  { years: "2024 – Present", title: "Volunteering", detail: "PERACH · HaNamer Association · Student Hub" },
+];
+
 function Tag({ children, variant }) {
   const styles =
     variant === "tool"
@@ -37,11 +44,11 @@ function Tag({ children, variant }) {
 
 function StatCard({ value, label }) {
   return (
-    <div className="flex flex-col gap-1.5 rounded-2xl border border-white/[0.09] bg-white/[0.045] p-6 backdrop-blur-md transition hover:-translate-y-0.5 hover:border-white/[0.16]">
-      <span className="bg-gradient-to-br from-[#5b9dff] to-[#34d399] bg-clip-text text-[1.8rem] font-extrabold tracking-tight text-transparent [font-variant-numeric:tabular-nums]">
+    <div className="flex flex-col gap-1.5 rounded-2xl border border-white/[0.09] bg-white/[0.045] p-4 sm:p-6 backdrop-blur-md transition hover:-translate-y-0.5 hover:border-white/[0.16]">
+      <span className="bg-gradient-to-br from-[#5b9dff] to-[#34d399] bg-clip-text block max-w-full text-[clamp(1.1rem,4.4vw,1.8rem)] leading-tight font-extrabold tracking-tight text-transparent [font-variant-numeric:tabular-nums]">
         {value}
       </span>
-      <span className="text-[0.78rem] uppercase tracking-wide text-[#5b6576]">{label}</span>
+      <span className="text-[0.78rem] uppercase tracking-wide text-[#8190a5]">{label}</span>
     </div>
   );
 }
@@ -73,7 +80,7 @@ export default function CV() {
 
         <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-[1.3fr_1fr]">
           <div className="h-full rounded-[1.1rem] border border-white/[0.09] bg-white/[0.045] p-7 backdrop-blur-md">
-            <p className="mb-4 font-mono text-[0.75rem] uppercase tracking-wider text-[#5b6576]">Summary</p>
+            <p className="mb-4 font-mono text-[0.75rem] uppercase tracking-wider text-[#8190a5]">Summary</p>
             <p className="mb-4 text-[0.98rem] leading-[1.75] text-[#93a0b3]">
               Currently in my third year of a{" "}
               <strong className="font-semibold text-[#edf1f6]">
@@ -98,7 +105,7 @@ export default function CV() {
           </div>
 
           <div className="h-full rounded-[1.1rem] border border-white/[0.09] bg-white/[0.045] p-7 backdrop-blur-md">
-            <p className="mb-4 font-mono text-[0.75rem] uppercase tracking-wider text-[#5b6576]">Tools</p>
+            <p className="mb-4 font-mono text-[0.75rem] uppercase tracking-wider text-[#8190a5]">Tools</p>
             <div className="flex flex-wrap gap-2.5">
               {TOOLS.map((t) => (
                 <Tag key={t} variant="tool">
@@ -106,7 +113,7 @@ export default function CV() {
                 </Tag>
               ))}
             </div>
-            <p className="mb-4 mt-6 font-mono text-[0.75rem] uppercase tracking-wider text-[#5b6576]">
+            <p className="mb-4 mt-6 font-mono text-[0.75rem] uppercase tracking-wider text-[#8190a5]">
               Core Knowledge
             </p>
             <div className="flex flex-wrap gap-2.5">
@@ -119,6 +126,21 @@ export default function CV() {
           </div>
         </div>
 
+
+        <div className="rounded-[1.1rem] border border-white/[0.09] bg-white/[0.045] p-7 backdrop-blur-md">
+          <p className="mb-6 font-mono text-[0.75rem] uppercase tracking-wider text-[#8190a5]">Timeline</p>
+          <ol className="relative flex flex-col gap-6 border-l border-white/[0.12] pl-6">
+            {TIMELINE.map((t) => (
+              <li key={t.title} className="relative">
+                <span className="absolute -left-[1.78rem] top-1.5 h-2.5 w-2.5 rounded-full bg-[#34d399] shadow-[0_0_8px_#34d399]" />
+                <p className="font-mono text-[0.76rem] text-[#5b9dff]">{t.years}</p>
+                <p className="mt-1 font-semibold text-[#edf1f6]">{t.title}</p>
+                <p className="text-[0.92rem] leading-[1.6] text-[#93a0b3]">{t.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
         <div className="flex flex-wrap items-center gap-4">
           <a
             href="/Liav_Pinhas_CV.pdf"
@@ -127,6 +149,13 @@ export default function CV() {
           >
             Download Full CV (PDF)
             <Download className="h-[1.05rem] w-[1.05rem]" />
+          </a>
+          <a
+            href="mailto:liavpinhas@gmail.com"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/[0.16] px-7 py-4 text-[1rem] font-semibold text-[#edf1f6] transition hover:-translate-y-0.5 hover:bg-white/[0.07]"
+          >
+            Get in touch
+            <Mail className="h-[1.05rem] w-[1.05rem]" />
           </a>
         </div>
       </div>

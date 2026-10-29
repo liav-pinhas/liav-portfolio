@@ -26,7 +26,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/[0.09] px-6 py-12">
       <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-6">
-        <span className="text-[0.85rem] text-[#5b6576]">
+        <span className="text-[0.85rem] text-[#8190a5]">
           © 2026 Liav Pinhas. Built with React &amp; Tailwind.
         </span>
 
@@ -58,7 +58,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <a href="#top" className="font-mono text-[0.76rem] text-[#5b6576] transition hover:text-[#5b9dff]">
+        <a href="#top" className="font-mono text-[0.76rem] text-[#8190a5] transition hover:text-[#5b9dff]">
           BACK TO TOP ↑
         </a>
       </div>

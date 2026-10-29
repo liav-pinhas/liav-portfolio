@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Mail, ChevronDown } from "lucide-react";
+import { ArrowRight, Download, Mail } from "lucide-react";
 
 // lucide-react dropped brand/logo icons (GitHub, LinkedIn, etc.) — only
 // generic UI icons remain in the package. These two are hand-drawn to match
@@ -66,6 +66,31 @@ export default function Hero() {
         }}
       />
 
+
+      {/* Signature: a slow-moving waveform, a nod to the scope on an EE bench */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 w-full opacity-40"
+      >
+        <defs>
+          <linearGradient id="wave" x1="0" x2="1">
+            <stop offset="0" stopColor="#5b9dff" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#5b9dff" />
+            <stop offset="1" stopColor="#34d399" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M0 60 C 100 0, 200 120, 300 60 S 500 0, 600 60 S 800 120, 900 60 S 1100 0, 1200 60"
+          fill="none"
+          stroke="url(#wave)"
+          strokeWidth="2"
+          strokeDasharray="14 10"
+          className="animate-[dash_14s_linear_infinite] motion-reduce:animate-none"
+        />
+      </svg>
+
       <div className="flex w-full max-w-3xl flex-col items-center gap-7 text-center">
         {/* Avatar — photo lives at /public/liav-photo.jpg (drop the file from the portfolio
             project folder into your project's public/ dir; adjust the src below if you rename it) */}
@@ -106,10 +131,10 @@ export default function Hero() {
 
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3.5">
           <a
-            href="#projects"
+            href="mailto:liavpinhas@gmail.com"
             className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#3b7dfd] to-[#2f66e0] px-6 py-3.5 text-[0.95rem] font-semibold text-[#061024] shadow-[0_0_0_1px_rgba(91,157,255,0.4),0_8px_24px_-8px_rgba(59,125,253,0.65)] transition hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(91,157,255,0.6),0_10px_32px_-6px_rgba(59,125,253,0.85)] active:translate-y-px"
           >
-            View Projects
+            Get in touch
             <ArrowRight className="h-[1.05rem] w-[1.05rem]" />
           </a>
           <a
@@ -150,10 +175,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1.5 font-mono text-[0.72rem] tracking-widest text-[#5b6576]">
-        SCROLL
-        <ChevronDown className="h-[1.1rem] w-[1.1rem] animate-bounce motion-reduce:animate-none" />
-      </div>
     </section>
   );
 }

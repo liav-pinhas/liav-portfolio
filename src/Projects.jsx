@@ -8,7 +8,7 @@ import { Plus } from "lucide-react";
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative px-6 pb-32 pt-28">
+    <section id="projects" className="relative px-6 pb-20 pt-16 sm:pb-32 sm:pt-28">
       <div className="mx-auto flex max-w-4xl flex-col gap-12">
         <div className="flex max-w-xl flex-col items-start gap-3.5">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.09] bg-white/[0.045] px-3.5 py-1.5 font-mono text-[0.78rem] tracking-wide text-[#5b9dff] backdrop-blur-md">

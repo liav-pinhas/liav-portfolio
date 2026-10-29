@@ -59,10 +59,10 @@ export default function Hero() {
 
       {/* Ambient blue / emerald glow blobs */}
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-55 blur-[10px]"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-90 blur-[10px] sm:opacity-55"
         style={{
           background:
-            "radial-gradient(38rem 26rem at 14% 8%, rgba(91,157,255,0.35), transparent 60%), radial-gradient(34rem 24rem at 88% 82%, rgba(52,211,153,0.28), transparent 60%)",
+            "radial-gradient(min(38rem,110vw) 26rem at 14% 8%, rgba(91,157,255,0.35), transparent 60%), radial-gradient(min(34rem,100vw) 24rem at 88% 82%, rgba(52,211,153,0.28), transparent 60%)",
         }}
       />
 
@@ -122,17 +122,12 @@ export default function Hero() {
           </span>
         </p>
 
-        <div className="flex max-w-xl flex-col gap-1.5 text-[1.05rem] leading-[1.65] text-[#93a0b3]">
+        <div className="flex max-w-xl flex-col gap-1.5 text-[1rem] leading-[1.6] text-[#93a0b3] sm:text-[1.05rem]">
           <p>
-            <strong className="font-semibold text-[#edf1f6]">96.55</strong> cumulative average (
-            <strong className="font-semibold text-[#edf1f6]">98.6</strong> in first year) · Dean&apos;s List
+            <strong className="font-semibold text-[#edf1f6]">96.55</strong> cumulative average · Dean&apos;s List
           </p>
-          <p>
-            Hands&#8209;on in{" "}
-            <strong className="font-semibold text-[#edf1f6]">PSIM, PSpice, Multisim and MATLAB</strong>, and in
-            the lab
-          </p>
-          <p>Sayeret Golani veteran and active IDF reserve commander</p>
+          <p className="font-medium text-[#edf1f6]">PSIM · PSpice · Multisim · MATLAB</p>
+          <p>Golani veteran · IDF reserve commander</p>
         </div>
 
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3.5">

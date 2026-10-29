@@ -11,13 +11,14 @@ import { Download } from "lucide-react";
 // plain <a download> does nothing inside that preview frame — this file is
 // the real, simpler thing you actually ship.)
 
-const TOOLS = ["C++", "MATLAB", "PSpice", "Multisim"];
+const TOOLS = ["PSIM", "PSpice", "Multisim", "MATLAB"];
 const CORE_KNOWLEDGE = [
   "Signals & Systems",
   "Control Systems",
   "Semiconductor Devices",
-  "Circuit Analysis",
+  "Digital Signal Processing",
   "Electromagnetics",
+  "Power Electronics",
 ];
 
 function Tag({ children, variant }) {
@@ -64,7 +65,7 @@ export default function CV() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          <StatCard value="95.3" label="Cumulative Average" />
+          <StatCard value="96.55" label="Cumulative Average" />
           <StatCard value="98.6" label="First-Year Average" />
           <StatCard value="Dean's List" label="Academic Distinction" />
           <StatCard value="3rd Year" label="B.Sc. EE · Ariel University" />
@@ -78,18 +79,21 @@ export default function CV() {
               <strong className="font-semibold text-[#edf1f6]">
                 B.Sc. in Electrical &amp; Electronics Engineering
               </strong>{" "}
-              at Ariel University, with coursework spanning signals &amp; systems, digital systems,
-              electromagnetic fields, semiconductor devices, control theory, and circuit theory.
+              at Ariel University, with top grades in signals &amp; systems, digital signal processing,
+              electromagnetic fields and digital systems, and current coursework in power electronics,
+              switched mode power converters and energy conversion.
             </p>
             <p className="text-[0.98rem] leading-[1.75] text-[#93a0b3]">
-              Before university, I served as a{" "}
+              I served as a{" "}
+              <strong className="font-semibold text-[#edf1f6]">combat team sergeant in Sayeret Golani</strong>{" "}
+              (2019–2023), managing specialized equipment in complex, high-pressure operations, and today I am
+              a{" "}
               <strong className="font-semibold text-[#edf1f6]">
-                combat team commander in an IDF special-forces unit
-              </strong>{" "}
-              (Sayeret Golani), leading teams through complex, high-pressure operations — and I continue in
-              reserve duty today. Alongside my studies, I mentor youth through the national{" "}
-              <strong className="font-semibold text-[#edf1f6]">PERACH</strong> program and volunteer within my
-              unit&apos;s alumni community.
+                team commander and acting company operations officer in the IDF reserves
+              </strong>
+              . Alongside my studies, I volunteer with{" "}
+              <strong className="font-semibold text-[#edf1f6]">PERACH</strong>, the HaNamer Association and
+              Student Hub.
             </p>
           </div>
 

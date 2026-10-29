@@ -96,12 +96,12 @@ export default function Hero() {
         </p>
 
         <p className="max-w-xl text-[1.05rem] leading-[1.7] text-[#93a0b3]">
-          <strong className="font-semibold text-[#edf1f6]">95.3</strong> cumulative average (
+          <strong className="font-semibold text-[#edf1f6]">96.55</strong> cumulative average (
           <strong className="font-semibold text-[#edf1f6]">98.6</strong> in first year) — Dean&apos;s List.
-          Strong analytical foundation in signals, systems, and control, with hands-on programming in{" "}
-          <strong className="font-semibold text-[#edf1f6]">C++ and MATLAB</strong> and circuit simulation in{" "}
-          <strong className="font-semibold text-[#edf1f6]">PSpice and Multisim</strong>. Former combat team
-          commander in an IDF special-forces unit, bringing proven leadership under pressure.
+          Strong foundation in signals, systems, control and power electronics, with hands-on work in{" "}
+          <strong className="font-semibold text-[#edf1f6]">PSIM, PSpice, Multisim and MATLAB</strong> and in
+          the lab. Sayeret Golani veteran and active IDF reserve commander, bringing proven leadership under
+          pressure.
         </p>
 
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3.5">

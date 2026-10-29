@@ -28,6 +28,19 @@ const TIMELINE = [
   { years: "2024 – Present", title: "Volunteering", detail: "PERACH · HaNamer Association · Student Hub" },
 ];
 
+const CERTS = [
+  {
+    src: "/certs/deans-list.jpg",
+    alt: "Ariel University Dean's List certificate for Liav Pinhas",
+    label: "Dean's List, Ariel University",
+  },
+  {
+    src: "/certs/golani-appreciation.jpg",
+    alt: "Certificate of Appreciation from the Sayeret Golani commander",
+    label: "Certificate of Appreciation, Sayeret Golani",
+  },
+];
+
 function Tag({ children, variant }) {
   const styles =
     variant === "tool"
@@ -139,6 +152,31 @@ export default function CV() {
               </li>
             ))}
           </ol>
+        </div>
+
+        <div className="rounded-[1.1rem] border border-white/[0.09] bg-white/[0.045] p-7 backdrop-blur-md">
+          <p className="mb-6 font-mono text-[0.75rem] uppercase tracking-wider text-[#8190a5]">Certificates</p>
+          <div className="grid grid-cols-2 gap-5 sm:max-w-md">
+            {CERTS.map((c) => (
+              <a
+                key={c.src}
+                href={c.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-3 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#5b9dff]"
+              >
+                <img
+                  src={c.src}
+                  alt={c.alt}
+                  loading="lazy"
+                  className="aspect-[3/4] w-full rounded-lg border border-white/[0.12] object-cover object-top transition group-hover:-translate-y-0.5 group-hover:border-[#5b9dff]/60"
+                />
+                <span className="text-[0.88rem] leading-snug text-[#93a0b3] group-hover:text-[#edf1f6]">
+                  {c.label}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-4">

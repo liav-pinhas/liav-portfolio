@@ -115,19 +115,25 @@ export default function Hero() {
           Liav Pinhas
         </h1>
 
-        <p className="text-balance text-[clamp(1.05rem,2.4vw,1.3rem)] font-medium text-[#93a0b3]">
+        <p className="max-w-2xl text-balance text-[clamp(1.05rem,2.4vw,1.3rem)] font-medium leading-snug text-[#93a0b3]">
           Electrical &amp; Electronics Engineering Student{" "}
-          <span className="text-[#5b9dff]">·</span> Ariel University
+          <span className="whitespace-nowrap">
+            <span className="text-[#5b9dff]">·</span> Ariel University
+          </span>
         </p>
 
-        <p className="max-w-xl text-[1.05rem] leading-[1.7] text-[#93a0b3]">
-          <strong className="font-semibold text-[#edf1f6]">96.55</strong> cumulative average (
-          <strong className="font-semibold text-[#edf1f6]">98.6</strong> in first year) — Dean&apos;s List.
-          Strong foundation in signals, systems, control and power electronics, with hands-on work in{" "}
-          <strong className="font-semibold text-[#edf1f6]">PSIM, PSpice, Multisim and MATLAB</strong> and in
-          the lab. Sayeret Golani veteran and active IDF reserve commander, bringing proven leadership under
-          pressure.
-        </p>
+        <div className="flex max-w-xl flex-col gap-1.5 text-[1.05rem] leading-[1.65] text-[#93a0b3]">
+          <p>
+            <strong className="font-semibold text-[#edf1f6]">96.55</strong> cumulative average (
+            <strong className="font-semibold text-[#edf1f6]">98.6</strong> in first year) · Dean&apos;s List
+          </p>
+          <p>
+            Hands&#8209;on in{" "}
+            <strong className="font-semibold text-[#edf1f6]">PSIM, PSpice, Multisim and MATLAB</strong>, and in
+            the lab
+          </p>
+          <p>Sayeret Golani veteran and active IDF reserve commander</p>
+        </div>
 
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3.5">
           <a
